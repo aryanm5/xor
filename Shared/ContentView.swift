@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import Combine
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -26,6 +27,13 @@ struct ContentView: View {
             VStack {
                 TextField("Key", text: $key)
                     .border(Color.green)
+                    .keyboardType(.numberPad)
+                    .onReceive(Just(key)) { newValue in
+                        let filtered = newValue.filter { Set("0123456789").contains($0) }
+                        if filtered != newValue {
+                            self.key = filtered
+                        }
+                    }
                 Text("Key: \(key)")
                 
                 TextField("Message", text: $message)
@@ -106,7 +114,7 @@ extension Character {
     func unicodeScalarCodePoint() -> UInt32 {
         let characterString = String(self)
         let scalars = characterString.unicodeScalars
-
+        
         return scalars[scalars.startIndex].value
     }
 }
