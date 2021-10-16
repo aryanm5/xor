@@ -9,7 +9,8 @@ import SwiftUI
 import CoreData
 import Combine
 
-struct ContentView: View {
+
+struct ContentView: View, KeyboardReadable {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -18,35 +19,99 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     
-    @State private var key: String = "123"
-    @State private var message: String = "abcdefg"
-    @State private var encoded: String = "bababab"
+    @State private var key: String = "5050"
+    @State private var message: String = "Hi, welcome to CyberCipher!"
+    @State private var encoded: String = "᏷ᏟᏉᏉᏛᏝᏟ"
+    
+    @State private var isKeyboardVisible = false
     
     var body: some View {
-        ScrollView {
-            VStack {
-                TextField("Key", text: $key)
-                    .border(Color.green)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(key)) { newValue in
-                        let filtered = newValue.filter { Set("0123456789").contains($0) }
-                        if filtered != newValue {
-                            self.key = filtered
+        NavigationView {
+            ZStack {
+                Form {
+                    Section(header: Text("Key")) {
+                        
+                        TextField("0", text: $key)
+                            .keyboardType(.numberPad)
+                            .onReceive(Just(key)) { newValue in
+                                var filtered = newValue.filter { Set("0123456789").contains($0) }
+                                filtered = String([Int(filtered) ?? 0, 1000000].min()!)
+                                if filtered != newValue {
+                                    self.key = filtered
+                                }
+                            }
+                            .onReceive(keyboardPublisher) { newIsKeyboardVisible in
+                                isKeyboardVisible = newIsKeyboardVisible
+                            }
+                            .onChange(of: key) { newValue in
+                                xor()
+                            }
+                    }
+                    
+                    Section(header: Text("Message")) {
+                        
+                        TextEditor(text: $message)
+                            .padding(.leading, -5)
+                            .onChange(of: message) { newValue in
+                                xor()
+                            }
+                        
+                    }
+                    
+                    Section(header: Text("Cipher")) {
+                        Text("\(encoded)")
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    
+                    Section(header: Text("")) {
+                        EmptyView()
+                        
+                    }
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        if(isKeyboardVisible) {
+                            Button("Clear") {
+                                clear()
+                            }
                         }
                     }
-                Text("Key: \(key)")
-                
-                TextField("Message", text: $message)
-                    .border(Color.green)
-                Text("Message: \(message)")
-                
-                Button("Encode!") {
-                    xor()
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        if(isKeyboardVisible) {
+                            Button("Done") {
+                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                            }
+                        }
+                    }
                 }
                 
-                Text("Encoded: \(encoded)")
-                
+                VStack {
+                    Spacer()
+                    HStack(spacing: 20) {
+                        
+                        BottomButton(action: {
+                            swap()
+                        }, icon: "arrow.2.squarepath")
+                        
+                        BottomButton(action: {}, icon: "bookmark")
+                        
+                        BottomButton(action: {
+                            copy()
+                        }, icon: "doc.on.doc")
+                        
+                        BottomButton(action: {
+                            share()
+                        }, icon: "square.and.arrow.up")
+                        
+                    }
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 5)
+                    .background(Blur(style: .systemThinMaterial))
+                    .clipShape(Capsule())
+                    .padding(.bottom, 15)
+                }
             }
+            .navigationTitle("CyberCipher")
         }
     }
     
@@ -61,15 +126,43 @@ struct ContentView: View {
         }
         
         let data = Data(bytes: encrypted, count: encrypted.count * MemoryLayout<UInt32>.stride)
-        encoded = String(data: data, encoding: .utf32LittleEndian) ?? "There was an error."
+        encoded = String(data: data, encoding: .utf32LittleEndian) ?? "That key is not supported! Please try another one."
         
         //encoded = String(utf32CodeUnits: encrypted, count: encrypted.count)
         //encoded = String(bytes: encrypted, encoding: .utf16) ?? "There was an error."
         
-        message = encoded
+        //message = encoded
         //UIPasteboard.general.setValue(encoded, forPasteboardType: "")
     }
     
+    private func clear() {
+        message = ""
+        encoded = ""
+    }
+    
+    private func swap() {
+        let temp = encoded
+        encoded = message
+        message = temp
+    }
+    
+    private func copy() {
+        UIPasteboard.general.string = encoded
+    }
+    
+    private func share() {
+        present(UIActivityViewController(activityItems: [encoded], applicationActivities: nil), animated: true)
+    }
+    
+    private func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+        guard var topController = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else { return }
+        
+        while let presentedViewController = topController.presentedViewController {
+            topController = presentedViewController
+        }
+        
+        topController.present(viewController, animated: animated, completion: completion)
+    }
     
     private func addItem() {
         withAnimation {
@@ -100,6 +193,18 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }
+}
+
+struct Blur: UIViewRepresentable {
+    var style: UIBlurEffect.Style = .systemMaterial
+    
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: style))
+    }
+    
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
     }
 }
 
