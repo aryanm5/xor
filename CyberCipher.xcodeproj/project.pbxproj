@@ -7,47 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F94F13D271ABD0D00681B43 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F13C271ABD0D00681B43 /* KeyboardReadable.swift */; };
-		2F94F13E271ABD0D00681B43 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F13C271ABD0D00681B43 /* KeyboardReadable.swift */; };
+		2F94F14D271AD25700681B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F14B271AD25700681B43 /* ContentView.swift */; };
 		2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
 		2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
-		2FB6F9E12715772400A64CC9 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CE2715772200A64CC9 /* CyberCipherApp.swift */; };
-		2FB6F9E22715772400A64CC9 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CE2715772200A64CC9 /* CyberCipherApp.swift */; };
-		2FB6F9E32715772400A64CC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CF2715772200A64CC9 /* ContentView.swift */; };
-		2FB6F9E42715772400A64CC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CF2715772200A64CC9 /* ContentView.swift */; };
 		2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FB6F9E72715772400A64CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
 		2FB6F9E82715772400A64CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
-		2FF07D7F27192C0A002E3BD6 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D7E27192C0A002E3BD6 /* BottomButton.swift */; };
-		2FF07D8027192C0A002E3BD6 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D7E27192C0A002E3BD6 /* BottomButton.swift */; };
-		2FF07D8227193C35002E3BD6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8127193C35002E3BD6 /* SettingsView.swift */; };
-		2FF07D8327193C35002E3BD6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8127193C35002E3BD6 /* SettingsView.swift */; };
-		2FF07D852719459D002E3BD6 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D842719459D002E3BD6 /* SettingsRow.swift */; };
-		2FF07D862719459D002E3BD6 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D842719459D002E3BD6 /* SettingsRow.swift */; };
-		2FF07D88271946C2002E3BD6 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D87271946C2002E3BD6 /* SettingsItem.swift */; };
-		2FF07D89271946C2002E3BD6 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D87271946C2002E3BD6 /* SettingsItem.swift */; };
-		2FF07D8B271947A9002E3BD6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8A271947A9002E3BD6 /* SettingsViewModel.swift */; };
-		2FF07D8C271947A9002E3BD6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8A271947A9002E3BD6 /* SettingsViewModel.swift */; };
+		2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */; };
+		2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */; };
+		2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */; };
+		2FD6FB3C271BEEB700B27BE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */; };
+		2FD6FB3D271BEEB700B27BE8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */; };
+		2FD6FB3E271BEEB700B27BE8 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB37271BEEB700B27BE8 /* SettingsItem.swift */; };
+		2FD6FB3F271BEEB700B27BE8 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB38271BEEB700B27BE8 /* KeyboardReadable.swift */; };
+		2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB39271BEEB700B27BE8 /* SettingsRow.swift */; };
+		2FD6FB41271BEEB700B27BE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */; };
 		2FF07D8E27194829002E3BD6 /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */; };
 		2FF07D8F27194829002E3BD6 /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F94F13C271ABD0D00681B43 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
+		2F94F14B271AD25700681B43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
-		2FB6F9CE2715772200A64CC9 /* CyberCipherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
-		2FB6F9CF2715772200A64CC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FB6F9D02715772200A64CC9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2FB6F9D12715772400A64CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB6F9D62715772400A64CC9 /* CyberCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6F9DC2715772400A64CC9 /* CyberCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6F9DE2715772400A64CC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		2FF07D7E27192C0A002E3BD6 /* BottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
-		2FF07D8127193C35002E3BD6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2FF07D842719459D002E3BD6 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
-		2FF07D87271946C2002E3BD6 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
-		2FF07D8A271947A9002E3BD6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
+		2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
+		2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
+		2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		2FD6FB37271BEEB700B27BE8 /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		2FD6FB38271BEEB700B27BE8 /* KeyboardReadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
+		2FD6FB39271BEEB700B27BE8 /* SettingsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedKeysView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB6F9CB2715772200A64CC9 /* Shared */,
+				2FD6FB33271BEEB700B27BE8 /* iOS */,
 				2FB6F9DD2715772400A64CC9 /* macOS */,
 				2FB6F9D72715772400A64CC9 /* Products */,
 			);
@@ -81,15 +78,7 @@
 		2FB6F9CB2715772200A64CC9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2FB6F9CE2715772200A64CC9 /* CyberCipherApp.swift */,
-				2FF07D8127193C35002E3BD6 /* SettingsView.swift */,
 				2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */,
-				2FF07D8A271947A9002E3BD6 /* SettingsViewModel.swift */,
-				2FF07D842719459D002E3BD6 /* SettingsRow.swift */,
-				2FF07D87271946C2002E3BD6 /* SettingsItem.swift */,
-				2FB6F9CF2715772200A64CC9 /* ContentView.swift */,
-				2F94F13C271ABD0D00681B43 /* KeyboardReadable.swift */,
-				2FF07D7E27192C0A002E3BD6 /* BottomButton.swift */,
 				2FB6F9D02715772200A64CC9 /* Persistence.swift */,
 				2FB6F9D12715772400A64CC9 /* Assets.xcassets */,
 				2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */,
@@ -109,10 +98,27 @@
 		2FB6F9DD2715772400A64CC9 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F94F14B271AD25700681B43 /* ContentView.swift */,
 				2FB6F9DE2715772400A64CC9 /* macOS.entitlements */,
+				2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
+		};
+		2FD6FB33271BEEB700B27BE8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */,
+				2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */,
+				2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */,
+				2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */,
+				2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */,
+				2FD6FB37271BEEB700B27BE8 /* SettingsItem.swift */,
+				2FD6FB38271BEEB700B27BE8 /* KeyboardReadable.swift */,
+				2FD6FB39271BEEB700B27BE8 /* SettingsRow.swift */,
+			);
+			path = iOS;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -213,17 +219,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB6F9E12715772400A64CC9 /* CyberCipherApp.swift in Sources */,
-				2FF07D7F27192C0A002E3BD6 /* BottomButton.swift in Sources */,
 				2FF07D8E27194829002E3BD6 /* SavedKeysView.swift in Sources */,
+				2FD6FB3F271BEEB700B27BE8 /* KeyboardReadable.swift in Sources */,
 				2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */,
-				2FF07D852719459D002E3BD6 /* SettingsRow.swift in Sources */,
-				2FF07D8227193C35002E3BD6 /* SettingsView.swift in Sources */,
-				2F94F13D271ABD0D00681B43 /* KeyboardReadable.swift in Sources */,
-				2FF07D88271946C2002E3BD6 /* SettingsItem.swift in Sources */,
+				2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */,
+				2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */,
+				2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */,
 				2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
-				2FB6F9E32715772400A64CC9 /* ContentView.swift in Sources */,
-				2FF07D8B271947A9002E3BD6 /* SettingsViewModel.swift in Sources */,
+				2FD6FB41271BEEB700B27BE8 /* ContentView.swift in Sources */,
+				2FD6FB3C271BEEB700B27BE8 /* SettingsView.swift in Sources */,
+				2FD6FB3D271BEEB700B27BE8 /* SettingsViewModel.swift in Sources */,
+				2FD6FB3E271BEEB700B27BE8 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,17 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB6F9E22715772400A64CC9 /* CyberCipherApp.swift in Sources */,
-				2FF07D8027192C0A002E3BD6 /* BottomButton.swift in Sources */,
+				2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */,
 				2FF07D8F27194829002E3BD6 /* SavedKeysView.swift in Sources */,
+				2F94F14D271AD25700681B43 /* ContentView.swift in Sources */,
 				2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */,
-				2FF07D862719459D002E3BD6 /* SettingsRow.swift in Sources */,
-				2FF07D8327193C35002E3BD6 /* SettingsView.swift in Sources */,
-				2F94F13E271ABD0D00681B43 /* KeyboardReadable.swift in Sources */,
-				2FF07D89271946C2002E3BD6 /* SettingsItem.swift in Sources */,
 				2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
-				2FB6F9E42715772400A64CC9 /* ContentView.swift in Sources */,
-				2FF07D8C271947A9002E3BD6 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

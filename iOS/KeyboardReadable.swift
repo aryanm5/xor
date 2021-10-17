@@ -15,6 +15,7 @@ protocol KeyboardReadable {
     var keyboardPublisher: AnyPublisher<Bool, Never> { get }
 }
 
+
 extension KeyboardReadable {
     var keyboardPublisher: AnyPublisher<Bool, Never> {
         Publishers.Merge(
@@ -26,6 +27,7 @@ extension KeyboardReadable {
                 .publisher(for: UIResponder.keyboardWillHideNotification)
                 .map { _ in false }
         )
-        .eraseToAnyPublisher()
+            .eraseToAnyPublisher()
     }
 }
+

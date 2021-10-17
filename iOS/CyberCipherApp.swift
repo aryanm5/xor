@@ -14,12 +14,14 @@ struct CyberCipherApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
+                
                 ContentView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
                     .tabItem {
                         Label("Encryptor", systemImage: "lock.fill")
                     }
+
                 
                 SettingsView(viewModel: .init())
                     .tabItem {
@@ -29,7 +31,6 @@ struct CyberCipherApp: App {
         }
     }
 }
-
 
 
 
@@ -49,8 +50,6 @@ extension UIApplication: UIGestureRecognizerDelegate {
         return false // set to `false` if you don't want to detect tap during other gestures
     }
 }
-
-
 
 
 
