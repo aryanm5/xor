@@ -1,8 +1,8 @@
 //
-//  SettingsView.swift
+//  SettingsViewIOS.swift
 //  CyberCipher
 //
-//  Created by Aryan Mittal on 10/14/21.
+//  Created by Aryan Mittal on 10/16/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
 //
 
@@ -11,13 +11,15 @@ import SwiftUI
 struct SettingsView: View {
     
     @ObservedObject var viewModel: SettingsViewModel
+    let persistenceController = PersistenceController.shared
     
     var body: some View {
         NavigationView {
             List {
                 Section {
                     ForEach(viewModel.topItems, id: \.rawValue) { item in
-                        NavigationLink(destination: SavedKeysView()) {
+                        NavigationLink(destination: SavedKeysView()                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+) {
                             SettingsRow(item: item)
                         }
                     }

@@ -64,6 +64,7 @@ struct KeyDetails: View, KeyboardReadable {
             }
         }
         .navigationTitle("Key \(key)")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func saveKey() {
