@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F691913271CF5FC00CBFF5E /* KeyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F691912271CF5FC00CBFF5E /* KeyDetails.swift */; };
+		2F0BD391271D4EAF0096C200 /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BD390271D4EAF0096C200 /* CornerButton.swift */; };
+		2F45F117271D5CFF0037FA6F /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */; };
 		2F69191A271D25D300CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F691919271D25D300CBFF5E /* CloudKit.framework */; };
 		2F69191C271D261400CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F69191B271D261400CBFF5E /* CloudKit.framework */; };
 		2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F69191D271D2AA400CBFF5E /* AboutView.swift */; };
@@ -29,12 +30,12 @@
 		2FD6FB41271BEEB700B27BE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */; };
 		2FD6FB74271C2D3700B27BE8 /* KeyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB73271C2D3700B27BE8 /* KeyDetails.swift */; };
 		2FF07D8E27194829002E3BD6 /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */; };
-		2FF07D8F27194829002E3BD6 /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0BD390271D4EAF0096C200 /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
+		2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedKeysView.swift; sourceTree = "<group>"; };
 		2F691910271CE7C900CBFF5E /* iOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
-		2F691912271CF5FC00CBFF5E /* KeyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetails.swift; sourceTree = "<group>"; };
 		2F691919271D25D300CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		2F69191B271D261400CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2F69191D271D2AA400CBFF5E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		2FB6F9CB2715772200A64CC9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */,
 				2FB6F9D02715772200A64CC9 /* Persistence.swift */,
 				2FB6F9D12715772400A64CC9 /* Assets.xcassets */,
 				2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */,
@@ -113,9 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				2F94F14B271AD25700681B43 /* ContentView.swift */,
-				2F691912271CF5FC00CBFF5E /* KeyDetails.swift */,
+				2F0BD390271D4EAF0096C200 /* CornerButton.swift */,
 				2FB6F9DE2715772400A64CC9 /* macOS.entitlements */,
 				2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */,
+				2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -123,6 +124,7 @@
 		2FD6FB33271BEEB700B27BE8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */,
 				2FD6FB73271C2D3700B27BE8 /* KeyDetails.swift */,
 				2F691910271CE7C900CBFF5E /* iOS.entitlements */,
 				2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */,
@@ -267,11 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */,
-				2FF07D8F27194829002E3BD6 /* SavedKeysView.swift in Sources */,
 				2F94F14D271AD25700681B43 /* ContentView.swift in Sources */,
 				2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */,
-				2F691913271CF5FC00CBFF5E /* KeyDetails.swift in Sources */,
+				2F45F117271D5CFF0037FA6F /* SavedKeysView.swift in Sources */,
 				2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
+				2F0BD391271D4EAF0096C200 /* CornerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ struct AboutView: View {
                 
                 Text("CyberCipher is a text encryption tool that uses the XOR binary operation to encrypt messages using a secret key. The result can only be decrypted with the same key. This can be used to send secret messages, encrypt text, or store passwords.")
                     .padding()
+                    .padding(.top, 15)
                 
                 Text("Get started by encrypting some text, sending it to a friend, and letting them decrypt it.")
                     .padding()

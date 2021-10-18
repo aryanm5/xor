@@ -25,54 +25,71 @@ struct ContentView: View {
     @State private var message: String = "Hi, welcome to CyberCipher!"
     @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
     
+    
     var body: some View {
         NavigationView {
             Text("CyberCipher")
             HStack {
                 SavedKeysView()
-                    .frame(minWidth: 200)
-                Form {
-                    HStack {
-                        Text("Key:")
-                        
-                        TextField("0", text: $key)
-                            .frame(maxWidth: 150)
-                            .onReceive(Just(key)) { newValue in
-                                var filtered = newValue.filter { Set("0123456789").contains($0) }
-                                filtered = String([Int(filtered) ?? 0, 1000000].min()!)
-                                if filtered != newValue {
-                                    self.key = filtered
-                                }
-                            }
-                            .onChange(of: key) { newValue in
-                                xor()
-                            }
-                    }
-                    HStack {
-                        
-                        VStack {
-                            Text("Message:")
+                    .frame(minWidth: 150)
+                    .frame(maxWidth: 150)
+                
+                    Form {
+                        HStack {
+                            Text("Key:")
                             
-                            TextEditor(text: $message)
-                                .padding(.leading, -5)
-                                .onChange(of: message) { newValue in
+                            TextField("0", text: $key)
+                                .frame(maxWidth: 160)
+                                .onReceive(Just(key)) { newValue in
+                                    var filtered = newValue.filter { Set("0123456789").contains($0) }
+                                    filtered = String([Int(filtered) ?? 0, 1000000].min()!)
+                                    if filtered != newValue {
+                                        self.key = filtered
+                                    }
+                                }
+                                .onChange(of: key) { newValue in
                                     xor()
                                 }
-                        }
-                        
-                        VStack {
-                            Text("Cipher:")
-                            Text("\(encoded)")
-                                .fixedSize(horizontal: false, vertical: true)
                             Spacer()
+                            CornerButton(action: {
+                                swap()
+                            }, icon: "arrow.2.squarepath")
+                            
+                            CornerButton(action: bookmark, icon: items.filter { $0.key == Int64(key) }.isEmpty ? "bookmark" : "bookmark.fill")
+                            
+                            CornerButton(action: {
+                                copy()
+                            }, icon: "doc.on.doc")
+                            
+                            CornerButton(action: {
+                                share()
+                            }, icon: "square.and.arrow.up")
                         }
-                        .frame(minWidth: 150)
+                        .padding(.trailing)
+                        HStack {
+                            VStack {
+                                Text("Message:")
+                                
+                                TextEditor(text: $message)
+                                    .padding(.leading, -5)
+                                    .onChange(of: message) { newValue in
+                                        xor()
+                                    }
+                            }
+                            
+                            VStack {
+                                Text("Cipher:")
+                                Text("\(encoded)")
+                                    .fixedSize(horizontal: false, vertical: true)
+                                Spacer()
+                            }
+                            .frame(minWidth: 150)
+                        }
+                        .frame(minWidth: 450, minHeight: 180)
+                        .padding()
                     }
-                    .frame(minWidth: 600, minHeight: 200)
-                    .padding()
-                }
-                .navigationTitle("CyberCipher")
-                //Spacer()
+                    .navigationTitle("CyberCipher")
+                
             }
         }
     }
@@ -84,7 +101,7 @@ struct ContentView: View {
         
         // encrypt bytes
         for t in message {
-            encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)//[t.offset % key.count])
+            encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)
         }
         
         let data = Data(bytes: encrypted, count: encrypted.count * MemoryLayout<UInt32>.stride)
@@ -98,9 +115,7 @@ struct ContentView: View {
     }
     
     private func swap() {
-        let temp = encoded
-        encoded = message
-        message = temp
+        message = encoded
     }
     
     
@@ -112,6 +127,15 @@ struct ContentView: View {
         
     }
     
+    private func bookmark() {
+        let filtered = items.filter { $0.key == Int64(key) }
+        
+        if filtered.isEmpty {
+            addItem()
+        } else {
+            deleteItem(item: filtered[0])
+        }
+    }
     
     private func addItem() {
         withAnimation {
@@ -131,18 +155,17 @@ struct ContentView: View {
         }
     }
     
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-            
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    private func deleteItem(item: Item) {
+        
+        viewContext.delete(item)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     

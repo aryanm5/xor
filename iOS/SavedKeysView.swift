@@ -38,44 +38,40 @@ struct SavedKeysView: View {
                 .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))
             }
             .navigationTitle("Saved Keys")
-#if !os(macOS)
             .navigationBarTitleDisplayMode(.inline)
-#endif
         } else {
-            List {
-                ForEach(items) { item in
-                    NavigationLink(destination:
-                                    KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
-                                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                                   
-                    ) {
-                        VStack(alignment: .leading, spacing: 3.0) {
-                            Text(String(item.key))
-                                .font(.body)
-                                .foregroundColor(.primary)
-                                .lineLimit(1)
-                            if item.desc != nil && item.desc != "" {
-                                Text(item.desc ?? "")
-                                    .font(.footnote)
-                                    .foregroundColor(.secondary)
-                                    .lineLimit(2)
+            VStack {
+                List {
+                    ForEach(items) { item in
+                        NavigationLink(destination:
+                                        KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
+                                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                                       
+                        ) {
+                            VStack(alignment: .leading, spacing: 3.0) {
+                                Text(String(item.key))
+                                    .font(.body)
+                                    .foregroundColor(.primary)
+                                    .lineLimit(1)
+                                if item.desc != nil && item.desc != "" {
+                                    Text(item.desc ?? "")
+                                        .font(.footnote)
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(2)
+                                }
                             }
                         }
                     }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-#if !os(macOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
                 }
-#endif
             }
             .navigationTitle("Saved Keys")
-#if !os(macOS)
             .navigationBarTitleDisplayMode(.inline)
-#endif
         }
     }
     

@@ -18,8 +18,8 @@ struct SettingsView: View {
             List {
                 Section {
                     ForEach(viewModel.topItems, id: \.rawValue) { item in
-                        NavigationLink(destination: SavedKeysView()                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-) {
+                        NavigationLink(destination: SavedKeysView()
+                                        .environment(\.managedObjectContext, persistenceController.container.viewContext)) {
                             SettingsRow(item: item)
                         }
                     }

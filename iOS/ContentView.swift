@@ -124,17 +124,11 @@ struct ContentView: View, KeyboardReadable {
         
         // encrypt bytes
         for t in message {
-            encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)//[t.offset % key.count])
+            encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)
         }
         
         let data = Data(bytes: encrypted, count: encrypted.count * MemoryLayout<UInt32>.stride)
         encoded = String(data: data, encoding: .utf32LittleEndian) ?? "That key is not supported! Please try another one."
-        
-        //encoded = String(utf32CodeUnits: encrypted, count: encrypted.count)
-        //encoded = String(bytes: encrypted, encoding: .utf16) ?? "There was an error."
-        
-        //message = encoded
-        //UIPasteboard.general.setValue(encoded, forPasteboardType: "")
     }
     
     private func clear() {
@@ -143,9 +137,7 @@ struct ContentView: View, KeyboardReadable {
     }
     
     private func swap() {
-        let temp = encoded
-        encoded = message
-        message = temp
+        message = encoded
     }
     
 
