@@ -28,7 +28,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Text("Welcome to CyberCipher!")
+            Text("CyberCipher")
             HStack {
                 SavedKeysView()
                     .frame(minWidth: 200)

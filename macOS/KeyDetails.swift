@@ -1,0 +1,88 @@
+//
+//  KeyDetails.swift
+//  CyberCipher (macOS)
+//
+//  Created by Aryan Mittal on 10/17/21.
+//  Copyright © 2021 MittalDev. All rights reserved.
+//
+
+import SwiftUI
+import Combine
+
+struct KeyDetails: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Item>
+    
+    let item: Item
+    @State var key: String
+    @State var desc: String
+    @State private var isKeyboardVisible = false
+    
+    var body: some View {
+        Form {
+            Section(header: Text("Key")) {
+                TextField("0", text: $key)
+                    .onReceive(Just(key)) { newValue in
+                        var filtered = newValue.filter { Set("0123456789").contains($0) }
+                        filtered = String([Int(filtered) ?? 0, 1000000].min()!)
+                        if filtered != newValue {
+                            self.key = filtered
+                        }
+                    }
+                    .onChange(of: key) { newValue in
+                        saveKey()
+                    }
+            }
+            
+            Section(header: Text("Description")) {
+                TextEditor(text: $desc)
+                    .padding(.leading, -5)
+                    .onChange(of: desc) { newValue in
+                        saveDesc()
+                    }
+            }
+        }
+        .navigationTitle("Key \(key)")
+    }
+    
+    private func saveKey() {
+        item.key = Int64(key)!
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    
+    private func saveDesc() {
+        
+        item.desc = desc
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+}
+
+/*struct KeyDetails_Previews: PreviewProvider {
+ 
+ static var previews: some View {
+ KeyDetails()
+ }
+ }*/

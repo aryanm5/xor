@@ -20,38 +20,63 @@ struct SavedKeysView: View {
     private var items: FetchedResults<Item>
     
     var body: some View {
-        List {
-            ForEach(items) { item in
-                NavigationLink(destination:
-                                KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
-                                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                               
-                ) {
-                    VStack(alignment: .leading, spacing: 3.0) {
-                        Text(String(item.key))
-                            .font(.body)
-                            .foregroundColor(.primary)
-                            .lineLimit(1)
-                        if item.desc != nil && item.desc != "" {
-                            Text(item.desc ?? "")
-                                .font(.footnote)
-                                .foregroundColor(.secondary)
-                                .lineLimit(2)
+        
+        if items.isEmpty {
+            HStack(alignment: .center) {
+                VStack(alignment: .center, spacing: 6.0) {
+                    
+                    Text("No saved keys")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Tap the bookmark icon to\nsave your favorite keys")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))          
+            }
+            .navigationTitle("Saved Keys")
+#if !os(macOS)
+            .navigationBarTitleDisplayMode(.inline)
+#endif
+        } else {
+            List {
+                ForEach(items) { item in
+                    NavigationLink(destination:
+                                    KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
+                                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                                   
+                    ) {
+                        VStack(alignment: .leading, spacing: 3.0) {
+                            Text(String(item.key))
+                                .font(.body)
+                                .foregroundColor(.primary)
+                                .lineLimit(1)
+                            if item.desc != nil && item.desc != "" {
+                                Text(item.desc ?? "")
+                                    .font(.footnote)
+                                    .foregroundColor(.secondary)
+                                    .lineLimit(2)
+                            }
                         }
                     }
                 }
+                .onDelete(perform: deleteItems)
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-#if os(iOS)
-            ToolbarItem(placement: .navigationBarTrailing) {
-                EditButton()
+            .toolbar {
+#if !os(macOS)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
+#endif
             }
+            .navigationTitle("Saved Keys")
+#if !os(macOS)
+            .navigationBarTitleDisplayMode(.inline)
 #endif
         }
-        .navigationTitle("Saved Keys")
-        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func deleteItems(offsets: IndexSet) {

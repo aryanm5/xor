@@ -109,11 +109,12 @@ struct ContentView: View, KeyboardReadable {
                     .padding(.vertical, 5)
                     .background(Blur(style: .systemThinMaterial))
                     .clipShape(Capsule())
-                    .padding(.bottom, 15)
+                    .padding(.bottom, 20)
                 }
             }
             .navigationTitle("CyberCipher")
         }
+        .navigationViewStyle(.stack)
     }
     
     private func xor() {

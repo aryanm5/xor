@@ -17,7 +17,6 @@ struct CyberCipherApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            
         }
     }
 }
