@@ -10,6 +10,7 @@
 		2F691913271CF5FC00CBFF5E /* KeyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F691912271CF5FC00CBFF5E /* KeyDetails.swift */; };
 		2F69191A271D25D300CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F691919271D25D300CBFF5E /* CloudKit.framework */; };
 		2F69191C271D261400CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F69191B271D261400CBFF5E /* CloudKit.framework */; };
+		2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F69191D271D2AA400CBFF5E /* AboutView.swift */; };
 		2F94F14D271AD25700681B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F14B271AD25700681B43 /* ContentView.swift */; };
 		2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
 		2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 		2F691912271CF5FC00CBFF5E /* KeyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetails.swift; sourceTree = "<group>"; };
 		2F691919271D25D300CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		2F69191B271D261400CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2F69191D271D2AA400CBFF5E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		2F94F14B271AD25700681B43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		2FB6F9D02715772200A64CC9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */,
 				2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */,
 				2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */,
+				2F69191D271D2AA400CBFF5E /* AboutView.swift */,
 				2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */,
 				2FD6FB37271BEEB700B27BE8 /* SettingsItem.swift */,
 				2FD6FB38271BEEB700B27BE8 /* KeyboardReadable.swift */,
@@ -247,6 +250,7 @@
 				2FD6FB3F271BEEB700B27BE8 /* KeyboardReadable.swift in Sources */,
 				2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */,
 				2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */,
+				2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */,
 				2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */,
 				2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */,
 				2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,

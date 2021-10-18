@@ -10,7 +10,7 @@ import SwiftUI
 
 enum SettingsItem: Int {
     
-    case saved, rate, share, feedback
+    case saved, rate, share, feedback, about
     
     var title: LocalizedStringKey {
         switch self {
@@ -18,6 +18,7 @@ enum SettingsItem: Int {
         case .rate: return "Rate the App"
         case .share: return "Share"
         case .feedback: return "Feedback"
+        case .about: return "About the App"
         }
     }
     
@@ -27,6 +28,7 @@ enum SettingsItem: Int {
         case .rate: return "Are you loving it?"
         case .share: return "Tell your friends!"
         case .feedback: return "aryan@mittaldev.com"
+        case .about: return "Learn how it works!"
         }
     }
     
@@ -36,6 +38,7 @@ enum SettingsItem: Int {
         case .rate: return "star.fill"
         case .share: return "square.and.arrow.up"
         case .feedback: return "at"
+        case .about: return "hammer.fill"
         }
     }
     
@@ -45,6 +48,7 @@ enum SettingsItem: Int {
         case .rate: return .pink
         case .share: return .green
         case .feedback: return .blue
+        case .about: return .orange
         }
     }
     

@@ -12,6 +12,7 @@ final class SettingsViewModel: ObservableObject {
     
     @Published private(set) var topItems: [SettingsItem] = [.saved]
     @Published private(set) var footerItems: [SettingsItem] = [.rate, .share, .feedback]
+    @Published private(set) var lastItem: SettingsItem = .about
     
     
     var rateURL: URL {

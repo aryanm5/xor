@@ -35,7 +35,7 @@ struct SavedKeysView: View {
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
                 }
-                .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))          
+                .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))
             }
             .navigationTitle("Saved Keys")
 #if !os(macOS)

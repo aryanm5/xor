@@ -31,10 +31,14 @@ struct SettingsView: View {
                             SettingsRow(item: item)
                         }
                     }
+                    
+                    NavigationLink(destination: AboutView()) {
+                        SettingsRow(item: viewModel.lastItem)
+                    }
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle("Settings")
+            .navigationTitle("Settings")
         }
         .navigationViewStyle(.stack)
     }
@@ -60,6 +64,8 @@ struct SettingsView: View {
             present(UIActivityViewController(activityItems: [viewModel.shareURL], applicationActivities: nil), animated: true)
         case .feedback:
             openURL(viewModel.feedbackURL)
+        case .about:
+            break
         }
     }
     
