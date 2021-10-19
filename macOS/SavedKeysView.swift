@@ -31,7 +31,7 @@ struct SavedKeysView: View {
                         .foregroundColor(.primary)
                         .multilineTextAlignment(.center)
                     
-                    Text("Tap the bookmark icon to\nsave your favorite keys")
+                    Text("Click the bookmark icon to save your favorite keys")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
@@ -56,7 +56,13 @@ struct SavedKeysView: View {
                                     .lineLimit(2)
                             }
                         }
-                        
+                        .contextMenu {
+                            Button(action: {
+                                deleteItem(item: item)
+                            }){
+                                Text("Delete")
+                            }
+                        }
                     }
                     .onDelete(perform: deleteItems)
                 }
@@ -77,6 +83,20 @@ struct SavedKeysView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+    
+    private func deleteItem(item: Item) {
+        
+        viewContext.delete(item)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }

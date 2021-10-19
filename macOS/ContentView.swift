@@ -21,9 +21,11 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     
-    @State private var key: String = "92292"
-    @State private var message: String = "Hi, welcome to CyberCipher!"
-    @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
+    @Binding var key: String// = "92292"
+    @Binding var message: String// = "Hi, welcome to CyberCipher!"
+    @Binding var encoded: String// = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
+    
+    @State private var showSharePicker = false
     
     
     var body: some View {
@@ -34,61 +36,62 @@ struct ContentView: View {
                     .frame(minWidth: 150)
                     .frame(maxWidth: 150)
                 
-                    Form {
-                        HStack {
-                            Text("Key:")
-                            
-                            TextField("0", text: $key)
-                                .frame(maxWidth: 160)
-                                .onReceive(Just(key)) { newValue in
-                                    var filtered = newValue.filter { Set("0123456789").contains($0) }
-                                    filtered = String([Int(filtered) ?? 0, 1000000].min()!)
-                                    if filtered != newValue {
-                                        self.key = filtered
-                                    }
+                Form {
+                    HStack {
+                        Text("Key:")
+                        
+                        TextField("0", text: $key)
+                            .frame(maxWidth: 160)
+                            .onReceive(Just(key)) { newValue in
+                                var filtered = newValue.filter { Set("0123456789").contains($0) }
+                                filtered = String([Int(filtered) ?? 0, 1000000].min()!)
+                                if filtered != newValue {
+                                    self.key = filtered
                                 }
-                                .onChange(of: key) { newValue in
+                            }
+                            .onChange(of: key) { newValue in
+                                xor()
+                            }
+                        Spacer()
+                        CornerButton(action: {
+                            swap()
+                        }, icon: "arrow.2.squarepath")
+                        
+                        CornerButton(action: bookmark, icon: items.filter { $0.key == Int64(key) }.isEmpty ? "bookmark" : "bookmark.fill")
+                        
+                        CornerButton(action: {
+                            copy()
+                        }, icon: "doc.on.doc")
+                        
+                        CornerButton(action: {
+                            share()
+                        }, icon: "square.and.arrow.up")
+                            .background(SharingsPicker(isPresented: $showSharePicker, sharingItems: [encoded]))
+                    }
+                    .padding(.trailing)
+                    HStack {
+                        VStack {
+                            Text("Message:")
+                            
+                            TextEditor(text: $message)
+                                .padding(.leading, -5)
+                                .onChange(of: message) { newValue in
                                     xor()
                                 }
+                        }
+                        
+                        VStack {
+                            Text("Cipher:")
+                            Text("\(encoded)")
+                                .fixedSize(horizontal: false, vertical: true)
                             Spacer()
-                            CornerButton(action: {
-                                swap()
-                            }, icon: "arrow.2.squarepath")
-                            
-                            CornerButton(action: bookmark, icon: items.filter { $0.key == Int64(key) }.isEmpty ? "bookmark" : "bookmark.fill")
-                            
-                            CornerButton(action: {
-                                copy()
-                            }, icon: "doc.on.doc")
-                            
-                            CornerButton(action: {
-                                share()
-                            }, icon: "square.and.arrow.up")
                         }
-                        .padding(.trailing)
-                        HStack {
-                            VStack {
-                                Text("Message:")
-                                
-                                TextEditor(text: $message)
-                                    .padding(.leading, -5)
-                                    .onChange(of: message) { newValue in
-                                        xor()
-                                    }
-                            }
-                            
-                            VStack {
-                                Text("Cipher:")
-                                Text("\(encoded)")
-                                    .fixedSize(horizontal: false, vertical: true)
-                                Spacer()
-                            }
-                            .frame(minWidth: 150)
-                        }
-                        .frame(minWidth: 450, minHeight: 180)
-                        .padding()
+                        .frame(minWidth: 150)
                     }
-                    .navigationTitle("CyberCipher")
+                    .frame(minWidth: 400, minHeight: 180)
+                    .padding()
+                }
+                .navigationTitle("CyberCipher")
                 
             }
         }
@@ -118,13 +121,14 @@ struct ContentView: View {
         message = encoded
     }
     
-    
     private func copy() {
-        
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(encoded, forType: .string)
     }
     
     private func share() {
-        
+        showSharePicker = true
     }
     
     private func bookmark() {
@@ -189,8 +193,9 @@ extension Character {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/

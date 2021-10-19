@@ -12,7 +12,7 @@ enum SettingsItem: Int {
     
     case saved, rate, share, feedback, about
     
-    var title: LocalizedStringKey {
+    var title: String {
         switch self {
         case .saved: return "Saved Keys"
         case .rate: return "Rate the App"
@@ -22,7 +22,7 @@ enum SettingsItem: Int {
         }
     }
     
-    var subtitle: LocalizedStringKey {
+    var subtitle: String {
         switch self {
         case .saved: return "Keep track of your favorite keys"
         case .rate: return "Are you loving it?"

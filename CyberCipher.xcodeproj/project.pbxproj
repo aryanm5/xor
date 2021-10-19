@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F029783271DF14900A91C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
+		2F029784271DF14900A91C65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
 		2F0BD391271D4EAF0096C200 /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BD390271D4EAF0096C200 /* CornerButton.swift */; };
 		2F45F117271D5CFF0037FA6F /* SavedKeysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */; };
+		2F4F9DC8271DD39500CBA56C /* SharingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4F9DC7271DD39500CBA56C /* SharingsPicker.swift */; };
 		2F69191A271D25D300CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F691919271D25D300CBFF5E /* CloudKit.framework */; };
 		2F69191C271D261400CBFF5E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F69191B271D261400CBFF5E /* CloudKit.framework */; };
 		2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F69191D271D2AA400CBFF5E /* AboutView.swift */; };
+		2F8305DD271E244F00A2C47F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8305DC271E244F00A2C47F /* OnboardingView.swift */; };
+		2F8305DF271E292100A2C47F /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8305DE271E292100A2C47F /* OnboardingItem.swift */; };
+		2F8305E1271E2B0500A2C47F /* OnboardingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8305E0271E2B0500A2C47F /* OnboardingRow.swift */; };
 		2F94F14D271AD25700681B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F14B271AD25700681B43 /* ContentView.swift */; };
 		2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
 		2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
 		2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
-		2FB6F9E72715772400A64CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
-		2FB6F9E82715772400A64CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D12715772400A64CC9 /* Assets.xcassets */; };
 		2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */; };
 		2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */; };
 		2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */; };
@@ -35,10 +39,14 @@
 /* Begin PBXFileReference section */
 		2F0BD390271D4EAF0096C200 /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
 		2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedKeysView.swift; sourceTree = "<group>"; };
+		2F4F9DC7271DD39500CBA56C /* SharingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingsPicker.swift; sourceTree = "<group>"; };
 		2F691910271CE7C900CBFF5E /* iOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		2F691919271D25D300CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		2F69191B271D261400CBFF5E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2F69191D271D2AA400CBFF5E /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		2F8305DC271E244F00A2C47F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2F8305DE271E292100A2C47F /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		2F8305E0271E2B0500A2C47F /* OnboardingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRow.swift; sourceTree = "<group>"; };
 		2F94F14B271AD25700681B43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		2FB6F9D02715772200A64CC9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 				2FB6F9DE2715772400A64CC9 /* macOS.entitlements */,
 				2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */,
 				2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */,
+				2F4F9DC7271DD39500CBA56C /* SharingsPicker.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -125,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				2FF07D8D27194829002E3BD6 /* SavedKeysView.swift */,
+				2F8305DE271E292100A2C47F /* OnboardingItem.swift */,
+				2F8305E0271E2B0500A2C47F /* OnboardingRow.swift */,
+				2F8305DC271E244F00A2C47F /* OnboardingView.swift */,
 				2FD6FB73271C2D3700B27BE8 /* KeyDetails.swift */,
 				2F691910271CE7C900CBFF5E /* iOS.entitlements */,
 				2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */,
@@ -229,7 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB6F9E72715772400A64CC9 /* Assets.xcassets in Resources */,
+				2F029784271DF14900A91C65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB6F9E82715772400A64CC9 /* Assets.xcassets in Resources */,
+				2F029783271DF14900A91C65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,13 +262,16 @@
 			files = (
 				2FF07D8E27194829002E3BD6 /* SavedKeysView.swift in Sources */,
 				2FD6FB3F271BEEB700B27BE8 /* KeyboardReadable.swift in Sources */,
+				2F8305DF271E292100A2C47F /* OnboardingItem.swift in Sources */,
 				2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */,
 				2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */,
 				2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */,
 				2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */,
 				2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */,
 				2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
+				2F8305E1271E2B0500A2C47F /* OnboardingRow.swift in Sources */,
 				2FD6FB41271BEEB700B27BE8 /* ContentView.swift in Sources */,
+				2F8305DD271E244F00A2C47F /* OnboardingView.swift in Sources */,
 				2FD6FB3C271BEEB700B27BE8 /* SettingsView.swift in Sources */,
 				2FD6FB3D271BEEB700B27BE8 /* SettingsViewModel.swift in Sources */,
 				2FD6FB74271C2D3700B27BE8 /* KeyDetails.swift in Sources */,
@@ -271,6 +286,7 @@
 				2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */,
 				2F94F14D271AD25700681B43 /* ContentView.swift in Sources */,
 				2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */,
+				2F4F9DC8271DD39500CBA56C /* SharingsPicker.swift in Sources */,
 				2F45F117271D5CFF0037FA6F /* SavedKeysView.swift in Sources */,
 				2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
 				2F0BD391271D4EAF0096C200 /* CornerButton.swift in Sources */,
@@ -284,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -343,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -415,13 +433,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
 				PRODUCT_NAME = CyberCipher;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -449,13 +468,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
 				PRODUCT_NAME = CyberCipher;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -480,7 +500,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
 				PRODUCT_NAME = CyberCipher;
 				SDKROOT = macosx;
@@ -509,7 +529,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
 				PRODUCT_NAME = CyberCipher;
 				SDKROOT = macosx;

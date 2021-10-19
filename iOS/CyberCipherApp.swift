@@ -11,6 +11,8 @@ import SwiftUI
 struct CyberCipherApp: App {
     let persistenceController = PersistenceController.shared
     
+    @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
+    
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -21,12 +23,15 @@ struct CyberCipherApp: App {
                     .tabItem {
                         Label("Encryptor", systemImage: "lock.fill")
                     }
-
+                
                 
                 SettingsView(viewModel: .init())
                     .tabItem {
                         Label("Settings", systemImage: "gearshape.fill")
                     }
+            }
+            .sheet(isPresented: $needsAppOnboarding) {
+                OnboardingView(isPresented: $needsAppOnboarding)
             }
         }
     }
