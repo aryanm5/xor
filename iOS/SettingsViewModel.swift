@@ -16,11 +16,11 @@ final class SettingsViewModel: ObservableObject {
     
     
     var rateURL: URL {
-        URL(string: "itms-apps://apps.apple.com/app/id1537192731?action=write-review")!
+        URL(string: "itms-apps://apps.apple.com/app/id1590957645?action=write-review")!
     }
     
     var shareURL: URL {
-        URL(string: "https://apps.apple.com/app/id1537192731")!
+        URL(string: "https://apps.apple.com/app/id1590957645")!
     }
     
     var feedbackURL: URL {
