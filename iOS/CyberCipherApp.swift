@@ -38,7 +38,6 @@ struct CyberCipherApp: App {
 }
 
 
-
 extension UIApplication {
     func addTapGestureRecognizer() {
         guard let window = windows.first else { return }
@@ -55,7 +54,6 @@ extension UIApplication: UIGestureRecognizerDelegate {
         return false // set to `false` if you don't want to detect tap during other gestures
     }
 }
-
 
 
 
