@@ -13,7 +13,7 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to\nCyberCipher")
+            Text("Welcome to XOR")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)

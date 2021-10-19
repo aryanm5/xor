@@ -16,7 +16,7 @@ struct CyberCipherApp: App {
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var key: String = "92292"
-    @State private var message: String = "Hi, welcome to CyberCipher!"
+    @State private var message: String = "Hi, welcome to XOR!"
     @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
     
     var body: some Scene {

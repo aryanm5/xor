@@ -22,7 +22,7 @@ struct ContentView: View, KeyboardReadable {
     
     
     @State private var key: String = "92292"
-    @State private var message: String = "Hi, welcome to CyberCipher!"
+    @State private var message: String = "Hi, welcome to XOR!"
     @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
     
     @State private var isKeyboardVisible = false
@@ -112,7 +112,7 @@ struct ContentView: View, KeyboardReadable {
                     .padding(.bottom, 20)
                 }
             }
-            .navigationTitle("CyberCipher")
+            .navigationTitle("XOR Encryptor")
         }
         .navigationViewStyle(.stack)
     }

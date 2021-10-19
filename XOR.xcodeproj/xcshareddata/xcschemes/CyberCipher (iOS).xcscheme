@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FB6F9DB2715772400A64CC9"
-               BuildableName = "CyberCipher.app"
-               BlueprintName = "CyberCipher (macOS)"
-               ReferencedContainer = "container:CyberCipher.xcodeproj">
+               BlueprintIdentifier = "2FB6F9D52715772400A64CC9"
+               BuildableName = "XOR.app"
+               BlueprintName = "XOR (iOS)"
+               ReferencedContainer = "container:XOR.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FB6F9DB2715772400A64CC9"
-            BuildableName = "CyberCipher.app"
-            BlueprintName = "CyberCipher (macOS)"
-            ReferencedContainer = "container:CyberCipher.xcodeproj">
+            BlueprintIdentifier = "2FB6F9D52715772400A64CC9"
+            BuildableName = "XOR.app"
+            BlueprintName = "XOR (iOS)"
+            ReferencedContainer = "container:XOR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2FB6F9DB2715772400A64CC9"
-            BuildableName = "CyberCipher.app"
-            BlueprintName = "CyberCipher (macOS)"
-            ReferencedContainer = "container:CyberCipher.xcodeproj">
+            BlueprintIdentifier = "2FB6F9D52715772400A64CC9"
+            BuildableName = "XOR.app"
+            BlueprintName = "XOR (iOS)"
+            ReferencedContainer = "container:XOR.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

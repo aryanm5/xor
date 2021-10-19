@@ -51,8 +51,8 @@
 		2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		2FB6F9D02715772200A64CC9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2FB6F9D12715772400A64CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2FB6F9D62715772400A64CC9 /* CyberCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FB6F9DC2715772400A64CC9 /* CyberCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB6F9D62715772400A64CC9 /* XOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB6F9DC2715772400A64CC9 /* XOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6F9DE2715772400A64CC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
 		2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 		2FB6F9D72715772400A64CC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FB6F9D62715772400A64CC9 /* CyberCipher.app */,
-				2FB6F9DC2715772400A64CC9 /* CyberCipher.app */,
+				2FB6F9D62715772400A64CC9 /* XOR.app */,
+				2FB6F9DC2715772400A64CC9 /* XOR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2FB6F9D52715772400A64CC9 /* CyberCipher (iOS) */ = {
+		2FB6F9D52715772400A64CC9 /* XOR (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FB6F9EB2715772400A64CC9 /* Build configuration list for PBXNativeTarget "CyberCipher (iOS)" */;
+			buildConfigurationList = 2FB6F9EB2715772400A64CC9 /* Build configuration list for PBXNativeTarget "XOR (iOS)" */;
 			buildPhases = (
 				2FB6F9D22715772400A64CC9 /* Sources */,
 				2FB6F9D32715772400A64CC9 /* Frameworks */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = "CyberCipher (iOS)";
+			name = "XOR (iOS)";
 			productName = "CyberCipher (iOS)";
-			productReference = 2FB6F9D62715772400A64CC9 /* CyberCipher.app */;
+			productReference = 2FB6F9D62715772400A64CC9 /* XOR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2FB6F9DB2715772400A64CC9 /* CyberCipher (macOS) */ = {
+		2FB6F9DB2715772400A64CC9 /* XOR (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FB6F9EE2715772400A64CC9 /* Build configuration list for PBXNativeTarget "CyberCipher (macOS)" */;
+			buildConfigurationList = 2FB6F9EE2715772400A64CC9 /* Build configuration list for PBXNativeTarget "XOR (macOS)" */;
 			buildPhases = (
 				2FB6F9D82715772400A64CC9 /* Sources */,
 				2FB6F9D92715772400A64CC9 /* Frameworks */,
@@ -193,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = "CyberCipher (macOS)";
+			name = "XOR (macOS)";
 			productName = "CyberCipher (macOS)";
-			productReference = 2FB6F9DC2715772400A64CC9 /* CyberCipher.app */;
+			productReference = 2FB6F9DC2715772400A64CC9 /* XOR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FB6F9CA2715772200A64CC9 /* Build configuration list for PBXProject "CyberCipher" */;
+			buildConfigurationList = 2FB6F9CA2715772200A64CC9 /* Build configuration list for PBXProject "XOR" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2FB6F9D52715772400A64CC9 /* CyberCipher (iOS) */,
-				2FB6F9DB2715772400A64CC9 /* CyberCipher (macOS) */,
+				2FB6F9D52715772400A64CC9 /* XOR (iOS) */,
+				2FB6F9DB2715772400A64CC9 /* XOR (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -436,7 +436,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
-				PRODUCT_NAME = CyberCipher;
+				PRODUCT_NAME = XOR;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -472,7 +472,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
-				PRODUCT_NAME = CyberCipher;
+				PRODUCT_NAME = XOR;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -504,7 +504,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
-				PRODUCT_NAME = CyberCipher;
+				PRODUCT_NAME = XOR;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -533,7 +533,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mittaldev.cybercipher;
-				PRODUCT_NAME = CyberCipher;
+				PRODUCT_NAME = XOR;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -543,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FB6F9CA2715772200A64CC9 /* Build configuration list for PBXProject "CyberCipher" */ = {
+		2FB6F9CA2715772200A64CC9 /* Build configuration list for PBXProject "XOR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FB6F9E92715772400A64CC9 /* Debug */,
@@ -552,7 +552,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FB6F9EB2715772400A64CC9 /* Build configuration list for PBXNativeTarget "CyberCipher (iOS)" */ = {
+		2FB6F9EB2715772400A64CC9 /* Build configuration list for PBXNativeTarget "XOR (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FB6F9EC2715772400A64CC9 /* Debug */,
@@ -561,7 +561,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FB6F9EE2715772400A64CC9 /* Build configuration list for PBXNativeTarget "CyberCipher (macOS)" */ = {
+		2FB6F9EE2715772400A64CC9 /* Build configuration list for PBXNativeTarget "XOR (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FB6F9EF2715772400A64CC9 /* Debug */,

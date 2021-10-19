@@ -13,7 +13,7 @@ struct AboutView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 5) {
                 
-                Text("CyberCipher is a text encryption tool that uses the XOR binary operation to encrypt messages using a secret key. The result can only be decrypted with the same key. This can be used to send secret messages, encrypt text, or store passwords.")
+                Text("XOR is a text encryption tool that uses the XOR binary operation to encrypt messages using a secret key. The result can only be decrypted with the same key. This can be used to send secret messages, encrypt text, or store passwords.")
                     .padding()
                     .padding(.top, 15)
                 

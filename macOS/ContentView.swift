@@ -22,7 +22,7 @@ struct ContentView: View {
     
     
     @Binding var key: String// = "92292"
-    @Binding var message: String// = "Hi, welcome to CyberCipher!"
+    @Binding var message: String// = "Hi, welcome to XOR!"
     @Binding var encoded: String// = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
     
     @State private var showSharePicker = false
@@ -30,7 +30,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Text("CyberCipher")
+            Text("XOR")
             HStack {
                 SavedKeysView()
                     .frame(minWidth: 150)
@@ -91,8 +91,7 @@ struct ContentView: View {
                     .frame(minWidth: 400, minHeight: 180)
                     .padding()
                 }
-                .navigationTitle("CyberCipher")
-                
+                .navigationTitle("XOR Encryptor")
             }
         }
     }
