@@ -118,17 +118,20 @@ struct ContentView: View, KeyboardReadable {
     }
     
     private func xor() {
-        let cipher = UInt32(key)!
-        
-        var encrypted = [UInt32]()
-        
-        // encrypt bytes
-        for t in message {
-            encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)
+        if let cipher = UInt32(key) {
+            
+            var encrypted = [UInt32]()
+            
+            // encrypt bytes
+            for t in message {
+                encrypted.append(UInt32(t.unicodeScalarCodePoint()) ^ cipher)
+            }
+            
+            let data = Data(bytes: encrypted, count: encrypted.count * MemoryLayout<UInt32>.stride)
+            encoded = String(data: data, encoding: .utf32LittleEndian) ?? "That key is not supported! Please try another one."
+        } else {
+            encoded = "That key is not supported! Please try another one."
         }
-        
-        let data = Data(bytes: encrypted, count: encrypted.count * MemoryLayout<UInt32>.stride)
-        encoded = String(data: data, encoding: .utf32LittleEndian) ?? "That key is not supported! Please try another one."
     }
     
     private func clear() {
