@@ -23,8 +23,8 @@
 		2FB6F9E02715772400A64CC9 /* XOR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* XOR.xcdatamodeld */; };
 		2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
-		2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */; };
-		2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */; };
+		2FD6FB1F271BEC2300B27BE8 /* XORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB1D271BEC2000B27BE8 /* XORApp.swift */; };
+		2FD6FB23271BEDE700B27BE8 /* XORApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB22271BEDE700B27BE8 /* XORApp.swift */; };
 		2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */; };
 		2FD6FB3C271BEEB700B27BE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */; };
 		2FD6FB3D271BEEB700B27BE8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */; };
@@ -54,8 +54,8 @@
 		2FB6F9D62715772400A64CC9 /* XOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6F9DC2715772400A64CC9 /* XOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB6F9DE2715772400A64CC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
-		2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CyberCipherApp.swift; sourceTree = "<group>"; };
+		2FD6FB1D271BEC2000B27BE8 /* XORApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XORApp.swift; sourceTree = "<group>"; };
+		2FD6FB22271BEDE700B27BE8 /* XORApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XORApp.swift; sourceTree = "<group>"; };
 		2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
 		2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FD6FB36271BEEB700B27BE8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				2F94F14B271AD25700681B43 /* ContentView.swift */,
 				2F0BD390271D4EAF0096C200 /* CornerButton.swift */,
 				2FB6F9DE2715772400A64CC9 /* macOS.entitlements */,
-				2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */,
+				2FD6FB1D271BEC2000B27BE8 /* XORApp.swift */,
 				2F45F116271D5CFF0037FA6F /* SavedKeysView.swift */,
 				2F4F9DC7271DD39500CBA56C /* SharingsPicker.swift */,
 			);
@@ -139,7 +139,7 @@
 				2F8305DC271E244F00A2C47F /* OnboardingView.swift */,
 				2FD6FB73271C2D3700B27BE8 /* KeyDetails.swift */,
 				2F691910271CE7C900CBFF5E /* iOS.entitlements */,
-				2FD6FB22271BEDE700B27BE8 /* CyberCipherApp.swift */,
+				2FD6FB22271BEDE700B27BE8 /* XORApp.swift */,
 				2FD6FB3A271BEEB700B27BE8 /* ContentView.swift */,
 				2FD6FB34271BEEB700B27BE8 /* BottomButton.swift */,
 				2FD6FB35271BEEB700B27BE8 /* SettingsView.swift */,
@@ -266,7 +266,7 @@
 				2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */,
 				2FD6FB3B271BEEB700B27BE8 /* BottomButton.swift in Sources */,
 				2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */,
-				2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */,
+				2FD6FB23271BEDE700B27BE8 /* XORApp.swift in Sources */,
 				2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */,
 				2FB6F9DF2715772400A64CC9 /* XOR.xcdatamodeld in Sources */,
 				2F8305E1271E2B0500A2C47F /* OnboardingRow.swift in Sources */,
@@ -283,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */,
+				2FD6FB1F271BEC2300B27BE8 /* XORApp.swift in Sources */,
 				2F94F14D271AD25700681B43 /* ContentView.swift in Sources */,
 				2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */,
 				2F4F9DC8271DD39500CBA56C /* SharingsPicker.swift in Sources */,
@@ -490,7 +490,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8M9Y3FH3DC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -519,7 +519,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8M9Y3FH3DC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
