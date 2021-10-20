@@ -93,6 +93,7 @@ struct ContentView: View {
                 }
                 .navigationTitle("XOR Encryptor")
             }
+            .padding(.top)
         }
     }
     
