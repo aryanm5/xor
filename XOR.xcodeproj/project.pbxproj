@@ -19,8 +19,8 @@
 		2F8305DF271E292100A2C47F /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8305DE271E292100A2C47F /* OnboardingItem.swift */; };
 		2F8305E1271E2B0500A2C47F /* OnboardingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8305E0271E2B0500A2C47F /* OnboardingRow.swift */; };
 		2F94F14D271AD25700681B43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F94F14B271AD25700681B43 /* ContentView.swift */; };
-		2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
-		2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */; };
+		2FB6F9DF2715772400A64CC9 /* XOR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* XOR.xcdatamodeld */; };
+		2FB6F9E02715772400A64CC9 /* XOR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9CC2715772200A64CC9 /* XOR.xcdatamodeld */; };
 		2FB6F9E52715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6F9D02715772200A64CC9 /* Persistence.swift */; };
 		2FD6FB1F271BEC2300B27BE8 /* CyberCipherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD6FB1D271BEC2000B27BE8 /* CyberCipherApp.swift */; };
@@ -103,7 +103,7 @@
 			children = (
 				2FB6F9D02715772200A64CC9 /* Persistence.swift */,
 				2FB6F9D12715772400A64CC9 /* Assets.xcassets */,
-				2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */,
+				2FB6F9CC2715772200A64CC9 /* XOR.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 				2F69191E271D2AA400CBFF5E /* AboutView.swift in Sources */,
 				2FD6FB23271BEDE700B27BE8 /* CyberCipherApp.swift in Sources */,
 				2FD6FB40271BEEB700B27BE8 /* SettingsRow.swift in Sources */,
-				2FB6F9DF2715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
+				2FB6F9DF2715772400A64CC9 /* XOR.xcdatamodeld in Sources */,
 				2F8305E1271E2B0500A2C47F /* OnboardingRow.swift in Sources */,
 				2FD6FB41271BEEB700B27BE8 /* ContentView.swift in Sources */,
 				2F8305DD271E244F00A2C47F /* OnboardingView.swift in Sources */,
@@ -288,7 +288,7 @@
 				2FB6F9E62715772400A64CC9 /* Persistence.swift in Sources */,
 				2F4F9DC8271DD39500CBA56C /* SharingsPicker.swift in Sources */,
 				2F45F117271D5CFF0037FA6F /* SavedKeysView.swift in Sources */,
-				2FB6F9E02715772400A64CC9 /* CyberCipher.xcdatamodeld in Sources */,
+				2FB6F9E02715772400A64CC9 /* XOR.xcdatamodeld in Sources */,
 				2F0BD391271D4EAF0096C200 /* CornerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8M9Y3FH3DC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -452,7 +452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8M9Y3FH3DC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -573,13 +573,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2FB6F9CC2715772200A64CC9 /* CyberCipher.xcdatamodeld */ = {
+		2FB6F9CC2715772200A64CC9 /* XOR.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */,
 			);
 			currentVersion = 2FB6F9CD2715772200A64CC9 /* Shared.xcdatamodel */;
-			path = CyberCipher.xcdatamodeld;
+			path = XOR.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

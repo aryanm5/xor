@@ -1,6 +1,6 @@
 //
 //  OnboardingItem.swift
-//  CyberCipher (iOS)
+//  XOR (iOS
 //
 //  Created by Aryan Mittal on 10/18/21.
 //  Copyright © 2021 MittalDev. All rights reserved.

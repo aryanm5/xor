@@ -1,6 +1,6 @@
 //
-//  CyberCipherApp.swift
-//  CyberCipher (macOS)
+//  XORApp.swift
+//  XOR (macOS)
 //
 //  Created by Aryan Mittal on 10/16/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
@@ -10,7 +10,7 @@
 import SwiftUI
 
 @main
-struct CyberCipherApp: App {
+struct XORApp: App {
     let persistenceController = PersistenceController.shared
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -64,7 +64,7 @@ struct CyberCipherApp: App {
 }
 
 
-extension CyberCipherApp {
+extension XORApp {
     
     /// App version.
     static var version: String? {

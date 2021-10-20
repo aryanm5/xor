@@ -1,6 +1,6 @@
 //
 //  SavedKeysView.swift
-//  CyberCipher
+//  XOR
 //
 //  Created by Aryan Mittal on 10/14/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
@@ -34,6 +34,12 @@ struct SavedKeysView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
+                    
+                    Text("Suggestions: 92292, 9999, or 8588")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 30)
                 }
                 .padding(EdgeInsets(top: 0.0, leading: 44.0, bottom: 0.0, trailing: 44.0))
             }
@@ -60,9 +66,30 @@ struct SavedKeysView: View {
                                         .lineLimit(2)
                                 }
                             }
+                            .contextMenu {
+                                Button {
+                                    copyKey(key: String(item.key))
+                                } label: {
+                                    Label("Copy", systemImage: "doc.on.doc")
+                                }
+                                if #available(iOS 15.0, *) {
+                                    Button(role: .destructive) {
+                                        deleteItem(item: item)
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
+                                } else {
+                                    Button {
+                                        deleteItem(item: item)
+                                    } label: {
+                                        Label("Delete", systemImage: "trash").foregroundColor(Color.red)
+                                    }
+                                }
+                            }
                         }
                     }
                     .onDelete(perform: deleteItems)
+                    
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -73,6 +100,10 @@ struct SavedKeysView: View {
             .navigationTitle("Saved Keys")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    private func copyKey(key: String) {
+        UIPasteboard.general.string = key
     }
     
     private func deleteItems(offsets: IndexSet) {
@@ -87,6 +118,20 @@ struct SavedKeysView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+    
+    private func deleteItem(item: Item) {
+        
+        viewContext.delete(item)
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }

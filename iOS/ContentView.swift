@@ -1,6 +1,6 @@
 //
 //  ContentViewIOS.swift
-//  CyberCipher
+//  XOR
 //
 //  Created by Aryan Mittal on 10/16/21.
 //  Copyright © 2021 MittalDev. All rights reserved.

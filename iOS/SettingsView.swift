@@ -1,6 +1,6 @@
 //
 //  SettingsViewIOS.swift
-//  CyberCipher
+//  XOR
 //
 //  Created by Aryan Mittal on 10/16/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
@@ -44,7 +44,7 @@ struct SettingsView: View {
     }
     
     var footer: some View {
-        CyberCipherApp.fullVersion
+        XORApp.fullVersion
             .map { Text("VERSION \($0)") }
             .textCase(.uppercase)
             .foregroundColor(.secondary)

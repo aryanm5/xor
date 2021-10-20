@@ -1,5 +1,5 @@
 //
-//  CyberCipherApp.swift
+//  XORApp.swift
 //  Shared
 //
 //  Created by Aryan Mittal on 10/12/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CyberCipherApp: App {
+struct XORApp: App {
     let persistenceController = PersistenceController.shared
     
     @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
@@ -23,7 +23,6 @@ struct CyberCipherApp: App {
                     .tabItem {
                         Label("Encryptor", systemImage: "lock.fill")
                     }
-                
                 
                 SettingsView(viewModel: .init())
                     .tabItem {
@@ -57,7 +56,7 @@ extension UIApplication: UIGestureRecognizerDelegate {
 
 
 
-extension CyberCipherApp {
+extension XORApp {
     
     /// App version.
     static var version: String? {

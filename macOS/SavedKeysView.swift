@@ -1,6 +1,6 @@
 //
 //  SavedKeysView.swift
-//  CyberCipher (macOS)
+//  XOR (macOS)
 //
 //  Created by Aryan Mittal on 10/18/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
@@ -18,6 +18,8 @@ struct SavedKeysView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @Binding var key: String
     
     
     var body: some View {
@@ -58,8 +60,13 @@ struct SavedKeysView: View {
                         }
                         .contextMenu {
                             Button(action: {
+                                key = String(item.key)
+                            }) {
+                                Text("Use")
+                            }
+                            Button(action: {
                                 deleteItem(item: item)
-                            }){
+                            }) {
                                 Text("Delete")
                             }
                         }

@@ -1,6 +1,6 @@
 //
 //  BottomButton.swift
-//  CyberCipher
+//  XOR
 //
 //  Created by Aryan Mittal on 10/14/21.
 //  Copyright © 2021 MittalDev. All rights reserved.
@@ -16,8 +16,8 @@ struct BottomButton: View {
         Button(action: action) {
             Image(systemName: icon)
                 .font(Font.title2.weight(.bold))
-                .padding(10)
         }
+        .padding(10)
     }
 }
 
