@@ -21,9 +21,9 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     
-    @Binding var key: String// = "92292"
-    @Binding var message: String// = "Hi, welcome to XOR!"
-    @Binding var encoded: String// = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
+    @Binding var key: String
+    @Binding var message: String
+    @Binding var encoded: String
     
     @State private var showSharePicker = false
     
@@ -193,8 +193,8 @@ extension Character {
 
 
 /*struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-*/
+ static var previews: some View {
+ ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+ }
+ }
+ */

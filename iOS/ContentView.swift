@@ -77,7 +77,7 @@ struct ContentView: View, KeyboardReadable {
                             }
                         }
                     }
-
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         if isKeyboardVisible {
                             Button("Done") {
@@ -140,7 +140,7 @@ struct ContentView: View, KeyboardReadable {
         message = encoded
     }
     
-
+    
     private func copy() {
         UIPasteboard.general.string = encoded
     }
@@ -158,7 +158,7 @@ struct ContentView: View, KeyboardReadable {
         
         topController.present(viewController, animated: animated, completion: completion)
     }
-
+    
     private func bookmark() {
         let filtered = items.filter { $0.key == Int64(key) }
         
@@ -168,7 +168,7 @@ struct ContentView: View, KeyboardReadable {
             deleteItem(item: filtered[0])
         }
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -186,19 +186,19 @@ struct ContentView: View, KeyboardReadable {
             }
         }
     }
-
+    
     private func deleteItem(item: Item) {
         
         viewContext.delete(item)
-            
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
 
