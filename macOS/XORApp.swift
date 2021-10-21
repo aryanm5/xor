@@ -25,7 +25,7 @@ struct XORApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .commands {
-            CommandGroup(replacing: .textEditing) {
+            CommandGroup(after: .textEditing) {
                 Button(action: swap) {
                     Text("Swap")
                 }
@@ -37,9 +37,9 @@ struct XORApp: App {
                 .keyboardShortcut("D")
                 .keyboardShortcut(.clear)
             }
-            CommandGroup(replacing: .pasteboard) {
+            CommandGroup(after: .pasteboard) {
                 Button(action: copy) {
-                    Text("Copy")
+                    Text("Copy Result")
                 }
                 .keyboardShortcut("C")
             }
