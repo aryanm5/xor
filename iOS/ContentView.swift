@@ -23,7 +23,7 @@ struct ContentView: View, KeyboardReadable {
     
     @State private var key: String = "92292"
     @State private var message: String = "Hi, welcome to XOR!"
-    @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣇𖣽𖣦𖣡𖣶𖣇𖣭𖣴𖣬𖣡𖣶𖢥"
+    @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣜𖣋𖣖𖢥"
     
     @State private var isKeyboardVisible = false
     
@@ -149,7 +149,17 @@ struct ContentView: View, KeyboardReadable {
     }
     
     private func share() {
-        present(UIActivityViewController(activityItems: [encoded], applicationActivities: nil), animated: true)
+        let shareActivity = UIActivityViewController(activityItems: [encoded], applicationActivities: nil)
+        
+        if let vc = UIApplication.shared.windows.first?.rootViewController {
+            shareActivity.popoverPresentationController?.sourceView = vc.view
+            //Setup share activity position on screen on bottom center
+            shareActivity.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height, width: 0, height: 0)
+            shareActivity.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+            vc.present(shareActivity, animated: true, completion: nil)
+        }
+        
+        //present(UIActivityViewController(activityItems: [encoded], applicationActivities: nil), animated: true)
     }
     
     private func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
