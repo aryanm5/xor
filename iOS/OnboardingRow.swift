@@ -11,32 +11,38 @@ import SwiftUI
 struct OnboardingRow: View {
     
     let item: OnboardingItem
+    let reverse: Bool
     
     var body: some View {
-        HStack(alignment: .center, spacing: 16.0) {
+        HStack(alignment: .center, spacing: 0.0) {
             Image(systemName: item.systemImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-                .padding(8.0)
+                .frame(width: 26, height: 26)
+                .padding(13.0)
                 .background(item.color)
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 12.0, style: .continuous))
-            VStack(alignment: .leading, spacing: 3.0) {
+            
+            VStack(alignment: reverse ? .trailing : .leading, spacing: 3.0) {
                 Text(item.title)
                     .font(.system(size: 16))
                     .fontWeight(.medium)
                     .foregroundColor(.primary)
                     .lineLimit(1)
+                    .multilineTextAlignment(reverse ? .trailing : .leading)
                 
                 Text(item.subtitle)
                     .font(.system(size: 14))
                     .foregroundColor(.secondary)
                     .lineLimit(2)
+                    .multilineTextAlignment(reverse ? .trailing : .leading)
             }
+            .padding(.leading, 20)
         }
-        .padding(.vertical, 10)
+        .padding(.vertical, 22)
         .listRowBackground(Color(.systemGroupedBackground))
+        .environment(\.layoutDirection, reverse ? .rightToLeft : .leftToRight)
         .hideListRowSeparator()
     }
 }
@@ -56,6 +62,6 @@ extension View {
 
 struct OnboardingRow_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingRow(item: .secure)
+        OnboardingRow(item: .save, reverse: false)
     }
 }

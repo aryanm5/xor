@@ -34,7 +34,7 @@ enum SettingsItem: Int {
     
     var systemImageName: String {
         switch self {
-        case .saved: return "key"
+        case .saved: return "key.fill"
         case .rate: return "star.fill"
         case .share: return "square.and.arrow.up"
         case .feedback: return "at"

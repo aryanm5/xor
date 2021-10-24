@@ -19,12 +19,14 @@ struct OnboardingView: View {
                 .multilineTextAlignment(.center)
             
             HStack {
+                Spacer()
                 List {
-                    OnboardingRow(item: .secure)
-                    OnboardingRow(item: .twoway)
-                    OnboardingRow(item: .save)
+                    OnboardingRow(item: .secure, reverse: false)
+                    OnboardingRow(item: .twoway, reverse: true)
+                    OnboardingRow(item: .save, reverse: false)
                 }
                 .disabled(true)
+                Spacer()
             }
             
             Button(action: close) {
