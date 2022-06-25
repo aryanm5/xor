@@ -1,3 +1,3 @@
-# CyberCipher App
+# XOR App
 
-CyberCipher - iOS/MacOS XOR cipher app built with SwiftUI.
+XOR - iOS/MacOS XOR cipher app built with SwiftUI.
