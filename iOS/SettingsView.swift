@@ -19,23 +19,37 @@ struct SettingsView: View {
                 Section {
                     ForEach(viewModel.topItems, id: \.rawValue) { item in
                         NavigationLink(destination: SavedKeysView()
-                                        .environment(\.managedObjectContext, persistenceController.container.viewContext)) {
-                            SettingsRow(item: item)
-                        }
+                            .environment(\.managedObjectContext, persistenceController.container.viewContext)) {
+                                SettingsRow(item: item)
+                            }
                     }
                 }
                 
                 Section(footer: footer) {
-                    ForEach(viewModel.footerItems, id: \.rawValue) { item in
+                    /*ForEach(viewModel.footerItems, id: \.rawValue) { item in
                         Button(action: { handleTapOnItem(item) }) {
                             SettingsRow(item: item)
                         }
-                    }
-                    
-                    NavigationLink(destination: AboutView()) {
-                        SettingsRow(item: viewModel.lastItem)
-                    }
+                    }*/
+                
+                Button(action: { handleTapOnItem(.rate) }) {
+                    SettingsRow(item: .rate)
                 }
+                
+                ShareLink(item: viewModel.shareURL) {
+                    SettingsRow(item: .share)
+                }
+                
+                Button(action: { handleTapOnItem(.feedback) }) {
+                    SettingsRow(item: .feedback)
+                }
+                
+                NavigationLink(destination: AboutView()) {
+                    SettingsRow(item: viewModel.lastItem)
+                }
+                
+            }
+                
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("Settings")

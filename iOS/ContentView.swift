@@ -101,9 +101,11 @@ struct ContentView: View, KeyboardReadable {
                             copy()
                         }, icon: "doc.on.doc")
                         
-                        BottomButton(action: {
-                            share()
-                        }, icon: "square.and.arrow.up")
+                        ShareLink(item: encoded) {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(Font.title2.weight(.bold))
+                        }
+                        .padding(10)
                     }
                     .padding(.horizontal, 8)
                     .padding(.vertical, 5)
