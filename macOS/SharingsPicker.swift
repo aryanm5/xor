@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SharingsPicker: NSViewRepresentable {
     @Binding var isPresented: Bool
-    let sharingItems: [Any] = []
+    var sharingItems: [Any] = []
     
     func makeNSView(context: Context) -> NSView {
         let view = NSView()
