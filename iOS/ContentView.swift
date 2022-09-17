@@ -28,7 +28,7 @@ struct ContentView: View, KeyboardReadable {
     @State private var isKeyboardVisible: Bool = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 Form {
                     Section(header: Text("Key")) {
@@ -101,11 +101,9 @@ struct ContentView: View, KeyboardReadable {
                             copy()
                         }, icon: "doc.on.doc")
                         
-                        ShareLink(item: encoded) {
-                            Image(systemName: "square.and.arrow.up")
-                                .font(Font.title2.weight(.bold))
-                        }
-                        .padding(10)
+                        BottomButton(action: {
+                            share()
+                        }, icon: "square.and.arrow.up")
                     }
                     .padding(.horizontal, 8)
                     .padding(.vertical, 5)
@@ -116,6 +114,7 @@ struct ContentView: View, KeyboardReadable {
             }
             .navigationTitle("XOR Encryptor")
         }
+        .navigationViewStyle(.stack)
     }
     
     private func xor() {

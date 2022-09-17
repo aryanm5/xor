@@ -28,22 +28,10 @@ struct SettingsView: View {
                 }
                 
                 Section(footer: footer) {
-                    /*ForEach(viewModel.footerItems, id: \.rawValue) { item in
-                     Button(action: { handleTapOnItem(item) }) {
-                     SettingsRow(item: item)
-                     }
-                     }*/
-                    
-                    Button(action: { handleTapOnItem(.rate) }) {
-                        SettingsRow(item: .rate)
-                    }
-                    
-                    ShareLink(item: viewModel.shareURL) {
-                        SettingsRow(item: .share)
-                    }
-                    
-                    Button(action: { handleTapOnItem(.feedback) }) {
-                        SettingsRow(item: .feedback)
+                    ForEach(viewModel.footerItems, id: \.rawValue) { item in
+                        Button(action: { handleTapOnItem(item) }) {
+                            SettingsRow(item: item)
+                        }
                     }
                     
                     NavigationLink {
