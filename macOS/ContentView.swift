@@ -40,7 +40,7 @@ struct ContentView: View {
                     HStack {
                         Text("Key:")
                         
-                        TextField("0", text: $key)
+                        TextField("", text: $key)
                             .frame(maxWidth: 160)
                             .onReceive(Just(key)) { newValue in
                                 var filtered = newValue.filter { Set("0123456789").contains($0) }
