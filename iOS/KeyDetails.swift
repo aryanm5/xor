@@ -21,7 +21,7 @@ struct KeyDetails: View, KeyboardReadable {
     let item: Item
     @State var key: String
     @State var desc: String
-    @State private var isKeyboardVisible = false
+    @State private var isKeyboardVisible: Bool = false
     
     var body: some View {
         Form {

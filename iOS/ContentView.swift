@@ -25,7 +25,7 @@ struct ContentView: View, KeyboardReadable {
     @State private var message: String = "Hi, welcome to XOR!"
     @State private var encoded: String = "𖣌𖣭𖢨𖢤𖣳𖣡𖣨𖣧𖣫𖣩𖣡𖢤𖣰𖣫𖢤𖣜𖣋𖣖𖢥"
     
-    @State private var isKeyboardVisible = false
+    @State private var isKeyboardVisible: Bool = false
     
     var body: some View {
         NavigationStack {
