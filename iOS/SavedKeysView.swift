@@ -49,11 +49,10 @@ struct SavedKeysView: View {
             VStack {
                 List {
                     ForEach(items) { item in
-                        NavigationLink(destination:
-                                        KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
-                                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                                       
-                        ) {
+                        NavigationLink {
+                            KeyDetails(item: item, key: String(item.key), desc: item.desc ?? "")
+                                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        } label: {
                             VStack(alignment: .leading, spacing: 3.0) {
                                 Text(String(item.key))
                                     .font(.body)
