@@ -18,37 +18,41 @@ struct SettingsView: View {
             List {
                 Section {
                     ForEach(viewModel.topItems, id: \.rawValue) { item in
-                        NavigationLink(destination: SavedKeysView()
-                            .environment(\.managedObjectContext, persistenceController.container.viewContext)) {
-                                SettingsRow(item: item)
-                            }
+                        NavigationLink {
+                            SavedKeysView()
+                                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        } label: {
+                            SettingsRow(item: item)
+                        }
                     }
                 }
                 
                 Section(footer: footer) {
                     /*ForEach(viewModel.footerItems, id: \.rawValue) { item in
-                        Button(action: { handleTapOnItem(item) }) {
-                            SettingsRow(item: item)
-                        }
-                    }*/
-                
-                Button(action: { handleTapOnItem(.rate) }) {
-                    SettingsRow(item: .rate)
+                     Button(action: { handleTapOnItem(item) }) {
+                     SettingsRow(item: item)
+                     }
+                     }*/
+                    
+                    Button(action: { handleTapOnItem(.rate) }) {
+                        SettingsRow(item: .rate)
+                    }
+                    
+                    ShareLink(item: viewModel.shareURL) {
+                        SettingsRow(item: .share)
+                    }
+                    
+                    Button(action: { handleTapOnItem(.feedback) }) {
+                        SettingsRow(item: .feedback)
+                    }
+                    
+                    NavigationLink {
+                        AboutView()
+                    } label: {
+                        SettingsRow(item: viewModel.lastItem)
+                    }
+                    
                 }
-                
-                ShareLink(item: viewModel.shareURL) {
-                    SettingsRow(item: .share)
-                }
-                
-                Button(action: { handleTapOnItem(.feedback) }) {
-                    SettingsRow(item: .feedback)
-                }
-                
-                NavigationLink(destination: AboutView()) {
-                    SettingsRow(item: viewModel.lastItem)
-                }
-                
-            }
                 
             }
             .listStyle(InsetGroupedListStyle())

@@ -28,7 +28,7 @@ struct ContentView: View, KeyboardReadable {
     @State private var isKeyboardVisible = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Form {
                     Section(header: Text("Key")) {
@@ -116,7 +116,6 @@ struct ContentView: View, KeyboardReadable {
             }
             .navigationTitle("XOR Encryptor")
         }
-        .navigationViewStyle(.stack)
     }
     
     private func xor() {
