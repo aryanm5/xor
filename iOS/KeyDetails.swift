@@ -35,7 +35,7 @@ struct KeyDetails: View, KeyboardReadable {
                             self.key = filtered
                         }
                     }
-                    .onChange(of: key) { newValue in
+                    .onChange(of: key) { _ in
                         saveKey()
                     }
                     .onReceive(keyboardPublisher) { newIsKeyboardVisible in
@@ -46,7 +46,7 @@ struct KeyDetails: View, KeyboardReadable {
             Section(header: Text("Description")) {
                 TextEditor(text: $desc)
                     .padding(.leading, -5)
-                    .onChange(of: desc) { newValue in
+                    .onChange(of: desc) { _ in
                         saveDesc()
                     }
                     .onReceive(keyboardPublisher) { newIsKeyboardVisible in

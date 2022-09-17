@@ -45,7 +45,7 @@ struct ContentView: View, KeyboardReadable {
                             .onReceive(keyboardPublisher) { newIsKeyboardVisible in
                                 isKeyboardVisible = newIsKeyboardVisible
                             }
-                            .onChange(of: key) { newValue in
+                            .onChange(of: key) { _ in
                                 xor()
                             }
                     }
@@ -54,7 +54,7 @@ struct ContentView: View, KeyboardReadable {
                         
                         TextEditor(text: $message)
                             .padding(.leading, -5)
-                            .onChange(of: message) { newValue in
+                            .onChange(of: message) { _ in
                                 xor()
                             }
                         

@@ -49,7 +49,7 @@ struct ContentView: View {
                                     self.key = filtered
                                 }
                             }
-                            .onChange(of: key) { newValue in
+                            .onChange(of: key) { _ in
                                 xor()
                             }
                         Spacer()
@@ -75,7 +75,7 @@ struct ContentView: View {
                             
                             TextEditor(text: $message)
                                 .padding(.leading, -5)
-                                .onChange(of: message) { newValue in
+                                .onChange(of: message) { _ in
                                     xor()
                                 }
                         }
