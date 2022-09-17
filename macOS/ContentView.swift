@@ -25,7 +25,7 @@ struct ContentView: View {
     @Binding var message: String
     @Binding var encoded: String
     
-    @State private var showSharePicker = false
+    @State private var showSharePicker: Bool = false
     
     
     var body: some View {
